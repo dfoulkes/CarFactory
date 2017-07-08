@@ -16,6 +16,8 @@ a car is defined as follows:
  
 ##Need To Know
 
+please **DO NOT edit the tests in anyway**, the premise of this exercise is to get them working.
+
 So to test your implementation, navigate to the directory of the pom.xml file.
 enter the following command
 
