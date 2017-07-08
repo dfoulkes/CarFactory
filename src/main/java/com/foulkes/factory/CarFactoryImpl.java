@@ -10,7 +10,7 @@ import com.foulkes.model.*;
 public class CarFactoryImpl implements CarFactory{
 
 
-    public ModelT produce() {
+    public ModelT produce(String colour) {
 
         ModelT.ModelTBuilder modelTBuilder = new ModelT.ModelTBuilder();
         ModelT car = modelTBuilder.withColour("BLACK")

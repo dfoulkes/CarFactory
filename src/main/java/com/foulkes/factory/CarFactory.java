@@ -9,5 +9,5 @@ import com.foulkes.model.ModelT;
  */
 public interface CarFactory {
 
-     ModelT produce();
+     ModelT produce(String colour);
 }

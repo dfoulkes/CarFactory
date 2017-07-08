@@ -20,13 +20,16 @@ import static org.junit.Assert.assertThat;
  */
 public class CarFactoryImplTest {
 
+    public static final String BLUE = "BLUE";
+    public static final String BLACK = "BLACK";
+    public static final String RED = "RED";
     CarFactory carFactory;
     ModelT modelT;
 
     @Before
     public void setup(){
         carFactory = new CarFactoryImpl();
-        modelT = carFactory.produce();
+        modelT = carFactory.produce(BLACK);
     }
 
 
@@ -61,7 +64,19 @@ public class CarFactoryImplTest {
 
     @Test
     public void shouldBeBlack(){
-        assertThat(modelT.getColour(), is("BLACK"));
+        assertThat(modelT.getColour(), is(BLACK));
+    }
+
+    @Test
+    public void shouldBeBlue(){
+        modelT = carFactory.produce(BLUE);
+        assertThat(modelT.getColour(), is(BLUE));
+    }
+
+    @Test
+    public void shouldBeRed(){
+        modelT = carFactory.produce(RED);
+        assertThat(modelT.getColour(), is(RED));
     }
 
 
@@ -71,6 +86,5 @@ public class CarFactoryImplTest {
         modelT.getDoors().stream().map(d -> d.getDoorType()).forEach(doorType -> identifiedDoors.add(doorType));
         assertThat(identifiedDoors.size(), is(5));
     }
-
 
 }

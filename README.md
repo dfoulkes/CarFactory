@@ -3,16 +3,11 @@
 
 ##Overview
 
-Ok, lets get started stage one of the exercise, we want to create a factory (Supplied see CarFactory Class) then produces a Car
+Ok, in this stage we want to extend the range of colours that the Model T supports from 1
+to 3, we now want to include the following colours (RED, BLUE) 
 
-a car is defined as follows:
-
-    1. A Car Has 4 Wheels
-    2. A Car comes in the colour black.
-    3. A Car has a manual Transmission.
-    4. A Car as one engine which is 1.4 petrol
-    5. A Car has 5 doors.
-    6. A Car Wheel is 30cm in diameter.
+As before run the unit tests first to see which are failing before starting to write
+any code.
  
 ##Need To Know
 
