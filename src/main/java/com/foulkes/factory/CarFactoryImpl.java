@@ -13,7 +13,7 @@ public class CarFactoryImpl implements CarFactory{
     public ModelT produce(String colour) {
 
         ModelT.ModelTBuilder modelTBuilder = new ModelT.ModelTBuilder();
-        ModelT car = modelTBuilder.withColour("BLACK")
+        ModelT car = modelTBuilder.withColour(colour)
                         .withDoor(new Door.DoorBuilder().withDoorType(DoorType.BOOT).build())
                         .withDoor(new Door.DoorBuilder().withDoorType(DoorType.LEFT_BACK).build())
                         .withDoor(new Door.DoorBuilder().withDoorType(DoorType.RIGHT_BACK).build())

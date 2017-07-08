@@ -3,8 +3,8 @@
 
 ##Overview
 
-Ok, in this stage we want to extend the range of colours that the Model T supports from 1
-to 3, we now want to include the following colours (RED, BLUE) 
+The factory now want to include another model this is a people carrier that has 7 doors 
+comes in all three colours and has 1.8L engine and both manual and automatic transmission.
 
 As before run the unit tests first to see which are failing before starting to write
 any code.
@@ -18,4 +18,4 @@ enter the following command
 mvn clean install
 ```
 
-once you have completed and ALL the tests pass please proceed to stage 2.
+once you have completed and ALL the tests pass please proceed to stage 4.

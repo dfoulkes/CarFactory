@@ -40,7 +40,7 @@ public class ModelT {
     }
 
     public String getColour() {
-        return "BLACK";
+        return colour;
     }
 
     public void setDoors(Set<Door> doors) {
