@@ -12,6 +12,8 @@ Once you have completed the stage please **DO NOT** commit the branch back, any 
 
 if you wish to save your work then please sub-branch the branch when you are finished.
 
+please **DO NOT edit the tests in anyway**, the premise of this exercise is to get them working.
+
 
 ##Next step
 
