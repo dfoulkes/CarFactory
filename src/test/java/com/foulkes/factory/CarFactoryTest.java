@@ -16,7 +16,7 @@ import static org.junit.Assert.assertThat;
  * Project: carFactory
  * Package: com.foulkes.factory
  */
-public class CarFactoryImplTest {
+public class CarFactoryTest {
 
     private static final String BLUE = "BLUE";
     private static final String BLACK = "BLACK";
