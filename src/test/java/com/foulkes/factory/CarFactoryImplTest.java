@@ -39,8 +39,8 @@ public class CarFactoryImplTest {
     public void allCarWheelsShouldBeThirtyCm(){
         assertThat(modelT.getWheels()
                 .stream()
-                    .filter(wheel -> wheel.getSize().equals(30))
-                        .collect(toList()).size(), is(4));
+                .filter(wheel -> wheel.getSize().equals(30))
+                .collect(toList()).size(), is(4));
     }
 
 
@@ -51,24 +51,25 @@ public class CarFactoryImplTest {
 
     @Test
     public void shouldHaveTheCorrectEngineSize(){
-        assertThat(modelT.getEngine().getEngineSize(), is(1.4));
+        assertThat(modelT.getEngine().getEngineSize(), is(1.0));
     }
 
     @Test
-    public void shouldHaveFiveDoors() {
+    public void shouldHaveFiveDoors(){
         assertThat(modelT.getDoors().size(), is(5));
-    }
-
-    @Test
-    public void shouldContainUniqueWheels(){
-        Set<DoorType> identifiedDoors = new HashSet<>();
-        modelT.getDoors().stream().map(d -> d.getDoorType()).map(type -> identifiedDoors.add(type));
-        assertThat(identifiedDoors.size(), is(4));
     }
 
     @Test
     public void shouldBeBlack(){
         assertThat(modelT.getColour(), is("BLACK"));
+    }
+
+
+    @Test
+    public void shouldContainUniqueDoors(){
+        Set<DoorType> identifiedDoors = new HashSet<>();
+        modelT.getDoors().stream().map(d -> d.getDoorType()).forEach(doorType -> identifiedDoors.add(doorType));
+        assertThat(identifiedDoors.size(), is(5));
     }
 
 }

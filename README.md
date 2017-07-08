@@ -10,7 +10,7 @@ a car is defined as follows:
     1. A Car Has 4 Wheels
     2. A Car comes in the colour black.
     3. A Car has a manual Transmission.
-    4. A Car as one engine which is 1.4 petrol
+    4. A Car as one engine which is 1.0 petrol
     5. A Car has 5 doors.
     6. A Car Wheel is 30cm in diameter.
  
