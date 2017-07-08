@@ -2,29 +2,28 @@ package com.foulkes.factory;
 
 import com.foulkes.model.*;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by danfoulkes on 08/07/2017.
  * Project: carFactory
- * Package: PACKAGE_NAME
  */
 public class CarFactoryImpl implements CarFactory{
 
+    Map<CarType, CarFactory> factoryTypes = new HashMap<>();
 
-    public ModelT produce(String colour, CarType model, Transmission transmission) {
 
-        ModelT.ModelTBuilder modelTBuilder = new ModelT.ModelTBuilder();
-        ModelT car = modelTBuilder.withColour(colour)
-                        .withDoor(new Door.DoorBuilder().withDoorType(DoorType.BOOT).build())
-                        .withDoor(new Door.DoorBuilder().withDoorType(DoorType.LEFT_BACK).build())
-                        .withDoor(new Door.DoorBuilder().withDoorType(DoorType.RIGHT_BACK).build())
-                        .withDoor(new Door.DoorBuilder().withDoorType(DoorType.LEFT_FRONT).build())
-                        .withDoor(new Door.DoorBuilder().withDoorType(DoorType.RIGHT_FRONT).build())
-                        .withWheels(new ThreeSpoke().wheelBuilder(),4)
-                        .withCarType(CarType.MODELT)
-                        .withTransmission(Transmission.MANUAL)
-                        .withEngine(new Engine.Builder().withEngineSize(1.0).build())
-                        .build();
+    public CarFactoryImpl(){
+        factoryTypes.put(CarType.MODELT, new ModelTFactory());
+        factoryTypes.put(CarType.MODELW, new ModelWFactory());
+    }
 
-        return car;
+    public Car produce(String colour, CarType model, Transmission transmission) {
+        return getFactory(model).produce(colour,model,transmission);
+    }
+
+    private CarFactory getFactory(CarType carType){
+        return factoryTypes.get(carType);
     }
 }

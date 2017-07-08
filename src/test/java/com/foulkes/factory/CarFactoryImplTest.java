@@ -98,7 +98,7 @@ public class CarFactoryImplTest {
 
     @Test
     public void modelTShouldNotAllowAutomaticTransmission(){
-        Car car = carFactory.produce(RED, CarType.MODELW, Transmission.AUTOMATIC);
+        Car car = carFactory.produce(RED, CarType.MODELT, Transmission.AUTOMATIC);
         assertThat(car.getType(), is(CarType.MODELT));
         assertThat(car.getTransmission(), is(Transmission.MANUAL));
     }
