@@ -1,21 +1,26 @@
 
-#Title
+#Stage 1 Creating the Factory
 
 ##Overview
 
-This project is split across multiple branches that iterate upwards from 1 i.e CarFactory-Stage-1. Each branch will have a different README file 
-that will inform you on what todo in the next stage.
+Ok, lets get started stage one of the exercise, we want to create a factory (Supplied see CarFactory Class) then produces a Car
 
-Read the README file for all steps, execute the instructions using the java development skills you've aquired.
+a car is defined as follows:
 
-Once you have completed the stage please **DO NOT** commit the branch back, any pull requests on the branch i will decline.
+    1. A Car Has 4 Wheels
+    2. A Car comes in the colour black.
+    3. A Car has a manual Transmission.
+    4. A Car as one engine which is 1.4 petrol
+    5. A Car has 5 doors.
+    6. A Car Wheel is 30cm in diameter.
+ 
+##Need To Know
 
-if you wish to save your work then please sub-branch the branch when you are finished.
+So to test your implementation, navigate to the directory of the pom.xml file.
+enter the following command
 
-
-##Next step
-
-checkout branch one using the command: 
 ```
-git checkout CarFactory-Stage-1
+mvn clean install
 ```
+
+once you have completed and ALL the tests pass please proceed to stage 2.
