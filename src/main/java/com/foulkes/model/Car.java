@@ -9,6 +9,8 @@ import java.util.List;
  */
 public class Car {
 
+    private List<Door> doors;
+
 
     public List<Wheel> getWheels() {
         return null;
@@ -27,4 +29,7 @@ public class Car {
     }
 
 
+    public String getColour() {
+        return "";
+    }
 }
