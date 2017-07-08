@@ -5,6 +5,9 @@ import com.foulkes.model.Transmission;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static java.util.stream.Collectors.toList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -59,5 +62,14 @@ public class CarFactoryImplTest {
     public void shouldBeBlack(){
         assertThat(car.getColour(), is("BLACK"));
     }
+
+
+    @Test
+    public void shouldContainUniqueWheels(){
+        Set<DoorType> identifiedDoors = new HashSet<>();
+        car.getDoors().stream().map(d -> d.getDoorType()).map(type -> identifiedDoors.add(type));
+        assertThat(identifiedDoors.size(), is(4));
+    }
+
 
 }
