@@ -5,7 +5,6 @@ package com.foulkes.model;
  * Project: carFactory
  * Package: com.foulkes.model
  */
-public enum Transmission {
-
-    AUTOMATIC, MANUAL
+public enum CarType {
+    MODELW, MODELT
 }

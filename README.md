@@ -8,6 +8,8 @@ comes in all three colours and has 1.8L engine and both manual and automatic tra
 
 As before run the unit tests first to see which are failing before starting to write
 any code.
+
+this new version is called **Model W**
  
 ##Need To Know
 

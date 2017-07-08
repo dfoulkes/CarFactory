@@ -10,7 +10,7 @@ import com.foulkes.model.*;
 public class CarFactoryImpl implements CarFactory{
 
 
-    public ModelT produce(String colour) {
+    public ModelT produce(String colour, CarType model, Transmission transmission) {
 
         ModelT.ModelTBuilder modelTBuilder = new ModelT.ModelTBuilder();
         ModelT car = modelTBuilder.withColour(colour)
@@ -20,6 +20,7 @@ public class CarFactoryImpl implements CarFactory{
                         .withDoor(new Door.DoorBuilder().withDoorType(DoorType.LEFT_FRONT).build())
                         .withDoor(new Door.DoorBuilder().withDoorType(DoorType.RIGHT_FRONT).build())
                         .withWheels(new ThreeSpoke().wheelBuilder(),4)
+                        .withCarType(CarType.MODELT)
                         .withTransmission(Transmission.MANUAL)
                         .withEngine(new Engine.Builder().withEngineSize(1.0).build())
                         .build();

@@ -10,37 +10,56 @@ import java.util.Set;
  * Project: carFactory
  * Package: com.foulkes.model
  */
-public class ModelT {
+public class ModelT  implements Car{
 
     public static final String BLACK = "black";
-    Set<Door> doors;
-    Engine engine;
-    String colour;
-    Transmission transmission;
-    List<Wheel> wheels;
+    private Set<Door> doors;
+    private Engine engine;
+    private String colour;
+    private Transmission transmission;
+    private List<Wheel> wheels;
+    private CarType carType;
 
     public ModelT(){
     }
 
 
+    @Override
     public List<Wheel> getWheels() {
         return wheels;
     }
 
+    @Override
     public Transmission getTransmission() {
         return transmission;
     }
 
+    @Override
     public Engine getEngine() {
         return engine;
     }
 
+    @Override
     public Set<Door> getDoors() {
         return doors;
     }
 
+    @Override
     public String getColour() {
         return colour;
+    }
+
+    @Override
+    public CarType getType() {
+        return carType;
+    }
+
+    public CarType getCarType() {
+        return carType;
+    }
+
+    public void setCarType(CarType carType) {
+        this.carType = carType;
     }
 
     public void setDoors(Set<Door> doors) {
@@ -64,11 +83,12 @@ public class ModelT {
     }
 
     public static class  ModelTBuilder {
-        Set<Door> doors = new HashSet<>();
-        List<Wheel> wheels = new ArrayList<>();
-        Transmission transmission;
-        String colour;
-        Engine engine;
+        private Set<Door> doors = new HashSet<>();
+        private List<Wheel> wheels = new ArrayList<>();
+        private Transmission transmission;
+        private String colour;
+        private Engine engine;
+        private CarType carType;
 
         public ModelTBuilder withColour(String colour){
             this.colour = colour;
@@ -98,6 +118,11 @@ public class ModelT {
             return this;
         }
 
+        public ModelTBuilder withCarType(CarType carType){
+            this.carType = carType;
+            return this;
+        }
+
         public ModelT build(){
             ModelT modelT = new ModelT();
             modelT.setEngine(engine);
@@ -105,6 +130,7 @@ public class ModelT {
             modelT.setColour(colour);
             modelT.setTransmission(transmission);
             modelT.setWheels(wheels);
+            modelT.setCarType(carType);
             return modelT;
         }
 
