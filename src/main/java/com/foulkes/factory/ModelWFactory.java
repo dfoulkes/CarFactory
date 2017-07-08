@@ -21,6 +21,7 @@ public class ModelWFactory implements CarFactory {
                             .withDoors(generateDoors(colour))
                             .withTransmission(transmission)
                             .withWheels(getWheels())
+                            .withEngine(new Engine.Builder().withEngineSize(1.8).build())
                             .build();
     }
 
@@ -42,6 +43,7 @@ public class ModelWFactory implements CarFactory {
         doors.add(new Door(colour, DoorType.LEFT_FRONT));
         doors.add(new Door(colour, DoorType.RIGHT_BACK));
         doors.add(new Door(colour, DoorType.LEFT_BACK));
+        doors.add(new Door(colour, DoorType.BOOT));
         return doors;
     }
 }
