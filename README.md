@@ -8,6 +8,8 @@ to 3, we now want to include the following colours (RED, BLUE)
 
 As before run the unit tests first to see which are failing before starting to write
 any code.
+
+please **DO NOT edit the tests in anyway**, the premise of this exercise is to get them working.
  
 ##Need To Know
 
