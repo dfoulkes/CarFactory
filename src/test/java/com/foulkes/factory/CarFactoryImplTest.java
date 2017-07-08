@@ -55,4 +55,9 @@ public class CarFactoryImplTest {
         assertThat(car.getDoors().size(), is(5));
     }
 
+    @Test
+    public void shouldBeBlack(){
+        assertThat(car.getColour(), is("BLACK"));
+    }
+
 }
