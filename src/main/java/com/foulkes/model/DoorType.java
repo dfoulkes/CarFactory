@@ -5,6 +5,6 @@ package com.foulkes.model;
  * Project: carFactory
  * Package: com.foulkes.model
  */
-public enum DoorSide {
+public enum DoorType {
     LEFT_FRONT, RIGHT_FRONT, LEFT_BACK, RIGHT_BACK, BOOT
 }

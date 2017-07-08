@@ -8,9 +8,9 @@ package com.foulkes.model;
 public class Door {
 
     private String colour;
-    private DoorSide doorType;
+    private DoorType doorType;
 
-    public Door(String colour, DoorSide doorType) {
+    public Door(String colour, DoorType doorType) {
         this.colour = colour;
         this.doorType = doorType;
     }
@@ -19,7 +19,7 @@ public class Door {
         return colour;
     }
 
-    public DoorSide getDoorType() {
+    public DoorType getDoorType() {
         return doorType;
     }
 
@@ -38,9 +38,9 @@ public class Door {
 
     public static class DoorBuilder {
         String colour;
-        DoorSide doorType;
+        DoorType doorType;
 
-        public DoorBuilder withDoorType(DoorSide doorType){
+        public DoorBuilder withDoorType(DoorType doorType){
             this.doorType = doorType;
             return this;
         }

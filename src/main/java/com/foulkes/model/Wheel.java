@@ -8,4 +8,7 @@ package com.foulkes.model;
 public interface Wheel {
 
     Integer getSize();
+
+    Wheel wheelBuilder();
+
 }
