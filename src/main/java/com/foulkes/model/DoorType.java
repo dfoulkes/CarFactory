@@ -6,5 +6,5 @@ package com.foulkes.model;
  * Package: com.foulkes.model
  */
 public enum DoorType {
-    LEFT_FRONT, RIGHT_FRONT, LEFT_BACK, RIGHT_BACK, BOOT
+    LEFT_FRONT, RIGHT_FRONT, LEFT_BACK, RIGHT_BACK, BOOT, CENTRE_LEFT, CENTRE_RIGHT
 }
