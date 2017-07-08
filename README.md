@@ -10,6 +10,9 @@ As before run the unit tests first to see which are failing before starting to w
 any code.
 
 this new version is called **Model W**
+
+
+please **DO NOT edit the tests in anyway**, the premise of this exercise is to get them working.
  
 ##Need To Know
 
