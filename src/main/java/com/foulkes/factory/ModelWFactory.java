@@ -38,7 +38,6 @@ public class ModelWFactory implements CarFactory {
         HashSet<Door> doors = new HashSet<>();
         doors.add(new Door(colour, DoorType.CENTRE_LEFT));
         doors.add(new Door(colour, DoorType.CENTRE_RIGHT));
-
         doors.add(new Door(colour, DoorType.RIGHT_FRONT));
         doors.add(new Door(colour, DoorType.LEFT_FRONT));
         doors.add(new Door(colour, DoorType.RIGHT_BACK));
