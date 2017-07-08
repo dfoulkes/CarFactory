@@ -1,9 +1,13 @@
 package com.foulkes.factory;
 
-import com.foulkes.model.Car;
+import com.foulkes.model.ModelT;
+import com.foulkes.model.DoorType;
 import com.foulkes.model.Transmission;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import static java.util.stream.Collectors.toList;
 import static org.hamcrest.core.Is.is;
@@ -17,23 +21,23 @@ import static org.junit.Assert.assertThat;
 public class CarFactoryImplTest {
 
     CarFactory carFactory;
-    Car car;
+    ModelT modelT;
 
     @Before
     public void setup(){
         carFactory = new CarFactoryImpl();
-        car  = carFactory.produce();
+        modelT = carFactory.produce();
     }
 
 
     @Test
     public void carShouldHaveFourWheels(){
-        assertThat(car.getWheels().size(), is(4));
+        assertThat(modelT.getWheels().size(), is(4));
     }
 
     @Test
     public void allCarWheelsShouldBeThirtyCm(){
-        assertThat(car.getWheels()
+        assertThat(modelT.getWheels()
                 .stream()
                     .filter(wheel -> wheel.getSize().equals(30))
                         .collect(toList()).size(), is(4));
@@ -42,22 +46,29 @@ public class CarFactoryImplTest {
 
     @Test
     public void shouldHaveManualTransmission(){
-        assertThat(car.getTransmission(), is(Transmission.MANUAL));
+        assertThat(modelT.getTransmission(), is(Transmission.MANUAL));
     }
 
     @Test
     public void shouldHaveTheCorrectEngineSize(){
-        assertThat(car.getEngine().getEngineSize(), is(1.4));
+        assertThat(modelT.getEngine().getEngineSize(), is(1.4));
     }
 
     @Test
     public void shouldHaveFiveDoors() {
-        assertThat(car.getDoors().size(), is(5));
+        assertThat(modelT.getDoors().size(), is(5));
+    }
+
+    @Test
+    public void shouldContainUniqueWheels(){
+        Set<DoorType> identifiedDoors = new HashSet<>();
+        modelT.getDoors().stream().map(d -> d.getDoorType()).map(type -> identifiedDoors.add(type));
+        assertThat(identifiedDoors.size(), is(4));
     }
 
     @Test
     public void shouldBeBlack(){
-        assertThat(car.getColour(), is("BLACK"));
+        assertThat(modelT.getColour(), is("BLACK"));
     }
 
 }

@@ -5,11 +5,6 @@ package com.foulkes.model;
  * Project: carFactory
  * Package: com.foulkes.model
  */
-public class Door {
-
-    DoorType doorType;
-
-    public DoorType getDoorType() {
-        return doorType;
-    }
+public enum DoorType {
+    FRONT_LEFT, FRONT_RIGHT, REAR_LEFT, REAR_RIGHT
 }

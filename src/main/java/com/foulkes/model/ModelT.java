@@ -7,7 +7,7 @@ import java.util.List;
  * Project: carFactory
  * Package: com.foulkes.model
  */
-public class Car {
+public class ModelT {
 
     private List<Door> doors;
 
