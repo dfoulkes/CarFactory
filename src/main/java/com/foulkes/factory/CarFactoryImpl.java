@@ -11,6 +11,6 @@ public class CarFactoryImpl implements CarFactory{
 
 
     public ModelT produce() {
-        return null;
+        return new ModelT();
     }
 }

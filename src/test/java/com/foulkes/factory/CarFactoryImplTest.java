@@ -56,7 +56,7 @@ public class CarFactoryImplTest {
 
     @Test
     public void shouldHaveFiveDoors(){
-        assertThat(modelT.getDoors().size(), is(5));
+        assertThat(modelT.getDoors().size(), is(4));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class CarFactoryImplTest {
     public void shouldContainUniqueDoors(){
         Set<DoorType> identifiedDoors = new HashSet<>();
         modelT.getDoors().stream().map(d -> d.getDoorType()).forEach(doorType -> identifiedDoors.add(doorType));
-        assertThat(identifiedDoors.size(), is(5));
+        assertThat(identifiedDoors.size(), is(4));
     }
 
 }

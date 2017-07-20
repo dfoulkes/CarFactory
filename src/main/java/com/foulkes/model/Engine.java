@@ -6,10 +6,13 @@ package com.foulkes.model;
  * Package: com.foulkes.model
  */
 public class Engine {
-
-
+	
+	Double engineSize;
+	public Engine(){
+		this.engineSize = 1.0;
+	}
 
     public Double getEngineSize() {
-        return null;
+        return engineSize;
     }
 }

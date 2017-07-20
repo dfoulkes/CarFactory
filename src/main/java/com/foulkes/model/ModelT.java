@@ -1,5 +1,6 @@
 package com.foulkes.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -9,27 +10,38 @@ import java.util.List;
  */
 public class ModelT {
 
-    private List<Door> doors;
-
+    private List<Door> doors = new ArrayList<Door>();
+    private List<Wheel> wheels = new ArrayList<Wheel>();
+    Transmission manual = Transmission.MANUAL;
 
     public List<Wheel> getWheels() {
-        return null;
+    	for (int i = 1; i < 5; i++){
+    		wheels.add(new WheelImp());
+    	}
+    	System.out.println(wheels.size());
+        return wheels;
     }
 
     public Transmission getTransmission() {
-        return null;
+        return manual;
     }
 
     public Engine getEngine() {
-        return null;
+        return new Engine();
     }
 
     public List<Door> getDoors() {
-        return null;
+    	doors.add(new Door(DoorType.FRONT_LEFT));
+    	doors.add(new Door(DoorType.FRONT_RIGHT));
+    	doors.add(new Door(DoorType.REAR_LEFT));
+    	doors.add(new Door(DoorType.REAR_RIGHT));
+    	
+    	return doors;
     }
 
 
     public String getColour() {
-        return "";
+    	String color = "BLACK";
+        return color;
     }
 }
