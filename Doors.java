@@ -10,7 +10,7 @@ public class Doors
     
     public Doors()
     {
-        this.doors = 4;
+        this.doors = 5;
     }
     
     public Integer getCarDoors()

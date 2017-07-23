@@ -31,7 +31,7 @@ public class CarFactoryTest
 
     @Test
     public void allCarWheelsShouldBeThirtyCm(){
-        assertThat(carmodel.getDiameter().getCarDia(), is(4));
+        assertThat(carmodel.getDiameter().getCarDia(), is(30));
     }
 
 
@@ -52,6 +52,6 @@ public class CarFactoryTest
 
     @Test
     public void shouldBeBlack(){
-        assertThat(carmodel.getColor().getCarColor(), is("BLACK"));
+        assertThat(carmodel.getColor().getCarColor(), is("Black"));
     }
 }
