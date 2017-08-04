@@ -12,7 +12,11 @@ import java.util.Set;
  */
 public class ModelT {
 
-    public static final String BLACK = "black";
+    //public static final String BLACK = "black";
+    //public static final String BLUE = "blue";
+    //public static final String RED = "red";
+
+
     Set<Door> doors;
     Engine engine;
     String colour;
@@ -40,7 +44,7 @@ public class ModelT {
     }
 
     public String getColour() {
-        return "BLACK";
+    	return colour;
     }
 
     public void setDoors(Set<Door> doors) {
