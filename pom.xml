@@ -8,5 +8,33 @@
     <artifactId>carFactory</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <scm>
+        <developerConnection>scm:git:ssh://git@github.com:dfoulkes/CarFactory.git</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>repo.dan.co.uk</id>
+            <url>http://localhost:32768/nexus/content/repositories/example/</url>
+        </snapshotRepository>
+        <repository>
+            <id>repo.dan.co.uk</id>
+            <url>http://localhost:32768/nexus/content/repositories/example-release/</url>
+        </repository>
+    </distributionManagement>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.5.1</version>
+            <configuration>
+                <autoVersionSubmodules>true</autoVersionSubmodules>
+                <tagNameFormat>@{project.version}</tagNameFormat>
+                <arguments>-Dmessage="Web DTP - Version @{project.version}"</arguments>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
 </project>
