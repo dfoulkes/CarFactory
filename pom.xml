@@ -4,7 +4,7 @@
 
     <groupId>com.foulkes.learning</groupId>
     <artifactId>carFactory</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
 
     <scm>
         <developerConnection>scm:git:https://github.com/dfoulkes/CarFactory.git</developerConnection>
